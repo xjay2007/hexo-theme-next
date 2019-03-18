@@ -102,8 +102,8 @@ footer:
 # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 creative_commons:
   license: by-nc-sa
-  sidebar: false
-  post: false
+  sidebar: true
+  post: true
 
 
 # ---------------------------------------------------------------
@@ -142,6 +142,8 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
+  game: /game/ || gamepad
+
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -336,7 +338,7 @@ reward:
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
   enable: true
-  title: # custom header, leave empty to use the default one
+  title: 相似文章 # custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
