@@ -35,12 +35,15 @@
 
         {# Show year #}
         {% set year %}
+        {% set month %}
         {% set post.year = date(post.date, 'YYYY') %}
+        {% set post.month = date(post.date, 'MM') %}
 
-        {% if post.year !== year %}
+        {% if post.year !== year || post.month !== month %}
           {% set year = post.year %}
+          {% set month = post.month %}
           <div class="collection-title">
-            <{% if theme.seo %}h2{% else %}h1{% endif %} class="archive-year" id="archive-year-{{ year }}">{{ year }}</{% if theme.seo %}h2{% else %}h1{% endif %}>
+            <{% if theme.seo %}h2{% else %}h1{% endif %} class="archive-year" id="archive-year-{{ year }}-{{ month }}">{{ year }}-{{ month }}</{% if theme.seo %}h2{% else %}h1{% endif %}>
           </div>
         {% endif %}
         {# endshow #}
