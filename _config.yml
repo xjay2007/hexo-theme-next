@@ -49,7 +49,7 @@ rss:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2019
 
   # Icon between year and copyright info.
   icon:
@@ -93,9 +93,9 @@ footer:
 # Valid values of language: deed.zh, deed.fr, deed.de, etc.
 creative_commons:
   license: by-nc-sa
-  sidebar: false
-  post: false
-  language:
+  sidebar: true
+  post: true
+  language: deed.zh
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
@@ -117,11 +117,11 @@ disable_baidu_transformation: false
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 # Automatically add external URL with BASE64 encrypt & decrypt.
 exturl: false
@@ -159,9 +159,11 @@ baidu_push: false
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  tags: /tags/ || tags
+  categories: /categories/ || th
   archives: /archives/ || archive
+  game: /game/ || gamepad
+
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -178,9 +180,9 @@ menu_settings:
 
 # Schemes
 scheme: Muse
-#scheme: Mist
-#scheme: Pisces
-#scheme: Gemini
+# scheme: Mist
+# scheme: Pisces
+# scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -197,8 +199,8 @@ site_state: true
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  GitHub: https://github.com/xjay2007 || github
+  E-Mail: mailto:xjay2007@163.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -211,8 +213,8 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
-  transition: false
+  icons_only: true
+  transition: true
 
 # Blog rolls
 links_icon: link
@@ -221,13 +223,15 @@ links_layout: block
 #links_layout: inline
 links:
   #Title: http://example.com
+  dotrabbit: http://dotrabbit.tk
+  LePhee: http://www.lephee.net
 
 # Sidebar Avatar
 avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: #/images/avatar.gif
+  url: /images/avatar.jpeg
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -249,20 +253,20 @@ toc:
 
 sidebar:
   # Sidebar Position, available values: left | right (only for Pisces | Gemini).
-  position: left
-  #position: right
+  # position: left
+  position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
   # Pisces | Gemini: 240
-  #width: 300
+  width: 240
 
   # Sidebar Display, available values (only for Muse | Mist):
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically.
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  totally remove sidebar including sidebar toggle.
-  display: post
+  display: always
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 12
@@ -276,7 +280,7 @@ back2top:
   # Back to top in sidebar.
   sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
@@ -341,9 +345,9 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result
-    show_result: false
+    show_result: true
     # Style: only 'flat' is currently available, leave it blank if you prefer default theme
     style:
 
@@ -369,15 +373,15 @@ reward:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
-  title: # custom header, leave empty to use the default one
+  enable: true
+  title: 相似文章 # custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
     #PPMixingRate: 0.0
-    #isDate: false
-    #isImage: false
-    #isExcerpt: false
+    # isDate: false
+    # isImage: false
+    # isExcerpt: false
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -412,10 +416,10 @@ custom_logo:
 # Code Highlight theme
 # Available values: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 # Enable "cheers" for archive page.
-cheers: true
+cheers: false
 
 # TagCloud settings for tags page.
 tagcloud:
@@ -495,7 +499,7 @@ font:
 
 # Math Equations Render Support
 math:
-  enable: false
+  enable: true
 
   # Default (true) will load mathjax / katex script on demand.
   # That is it only render those page which has `mathjax: true` in Front Matter.
@@ -503,7 +507,7 @@ math:
   per_page: true
 
   engine: mathjax
-  #engine: katex
+  # engine: katex
 
   # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
   mathjax:
@@ -524,6 +528,24 @@ math:
       enable: false
       copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
       copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
+
+# PDF Support
+# Dependencies: https://github.com/theme-next/theme-next-pdf
+pdf:
+  enable: true
+
+  # Default(true) will load PDFObject/PDF.js script on demand
+  # That is it only render those page who has `pdf: true` in Front Matter.
+  # If you set it to false, it will load PDFObject/PDF.js srcipt EVERY PAGE.
+  per_page: true
+
+  height: 500px
+
+  pdfobject:
+    # Use 2.1.1 as default, jsdelivr as default CDN, works everywhere even in China
+    cdn: //cdn.jsdelivr.net/npm/pdfobject@2.1.1/pdfobject.min.js
+    # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
+    #cdn: //cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js
 
 # Han Support
 # Dependencies: https://github.com/theme-next/theme-next-han
@@ -722,18 +744,18 @@ likely:
 # Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Linkedin,Mailto,Reddit,Delicious,StumbleUpon,Pinterest,
 # GooglePlus,Tumblr,GoogleBookmarks,Newsvine,Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
-  enable: false
+  enable: true
   postbottom:
     enable: false
     options:
-      iconStyle: box
+      iconStyle: default
       boxForm: horizontal
       position: bottomCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
-    enable: false
+    enable: true
     options:
-      iconStyle: box
+      iconStyle: default
       boxForm: horizontal
       position: middleRight
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
@@ -815,16 +837,16 @@ leancloud_visitors:
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
 # Visit https://firebase.google.com/docs/firestore/ to get more information about firestore.
 firestore:
-  enable: false
+  enable: true
   collection: articles #required, a string collection name to access firestore database
-  apiKey: #required
-  projectId: #required
+  apiKey: AIzaSyCOupyyT9c_HVputgUAkikpDbhJeZrCYb8 #required
+  projectId: xjay-hexo-blog #required
   bluebird: false #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
 
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: user
   total_views: true
@@ -859,7 +881,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -950,7 +972,7 @@ mermaid:
 # Use velocity to animate everything.
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # Transition variants:
     # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
