@@ -164,6 +164,7 @@ menu:
   archives: /archives/ || archive
   # game: /game/ || gamepad
   comments: /comments/ || comments
+  links: /links/ || link
 
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -224,8 +225,9 @@ links_layout: block
 #links_layout: inline
 links:
   #Title: http://example.com
-  dotrabbit: http://dotrabbit.tk
-  LePhee: http://www.lephee.net
+  dotrabbit's lair: http://dotrabbit.tk
+  LePhee's Blog: http://www.lephee.net
+  添加友链>>: /links/
 
 # Sidebar Avatar
 avatar:
@@ -248,7 +250,7 @@ toc:
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-  expand_all: false
+  expand_all: true
   # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front Matter.
   max_depth: 6
 
@@ -640,7 +642,7 @@ valine:
   appid: xKOxwePoHeELQPP3auI4iGt4-gzGzoHsz # your leancloud application appid
   appkey: Oj7HRBN2ddvp7TlBs5mSP2Vr # your leancloud application appkey
   notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki
-  verify: true # Verification code
+  verify: false # Verification code
   placeholder: 来都来了，说点什么吧~ # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
