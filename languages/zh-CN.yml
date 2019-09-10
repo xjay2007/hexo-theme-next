@@ -14,6 +14,9 @@ menu:
   schedule: 日程表
   sitemap: 站点地图
   commonweal: 公益 404
+  game: 小游戏
+  comments: 留言
+  links: 友链
 sidebar:
   overview: 站点概览
   toc: 文章目录
@@ -93,3 +96,5 @@ symbols_count_time:
   time: 阅读时长
   time_total: 站点阅读时长
   time_minutes: 分钟
+links: 
+  title: 友情链接

@@ -19,6 +19,7 @@ NexT.utils.getScript('{{ valine_uri }}', () => {
     pageSize: '{{ theme.valine.pageSize }}' || 10,
     visitor: {{ theme.valine.visitor }},
     lang: '{{ theme.valine.language }}' || 'zh-cn',
+    recordIP: '{{ theme.valine.recordIP }}' || 'true',
     path: location.pathname
   });
 }, window.Valine);
