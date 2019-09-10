@@ -227,7 +227,7 @@ links:
   #Title: http://example.com
   dotrabbit's lair: http://dotrabbit.tk
   LePhee's Blog: http://www.lephee.net
-  添加友链>>: /links/
+  联系友链>>: /links/
 
 # Sidebar Avatar
 avatar:
@@ -639,8 +639,8 @@ changyan:
 # More info available at https://valine.js.org
 valine:
   enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-  appid: xKOxwePoHeELQPP3auI4iGt4-gzGzoHsz # your leancloud application appid
-  appkey: Oj7HRBN2ddvp7TlBs5mSP2Vr # your leancloud application appkey
+  appid: BDClYzBeMRLJtfjAb9BBtYGz-MdYXbMMI # your leancloud application appid
+  appkey: km4X4PQDFgv3e0Kvz1TEPYsI # your leancloud application appkey
   notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: 来都来了，说点什么吧~ # comment box placeholder
