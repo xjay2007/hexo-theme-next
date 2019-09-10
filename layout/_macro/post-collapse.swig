@@ -2,12 +2,15 @@
 {%- for post in posts %}
 
   {%- set year %}
+  {%- set month %}
   {%- set post.year = date(post.date, 'YYYY') %}
+  {%- set post.month = date(post.date, 'MM') %}
 
-  {%- if post.year !== year %}
+  {%- if post.year !== year || post.month !== month %}
     {%- set year = post.year %}
+    {%- set month = post.month %}
     <div class="collection-year">
-      <{%- if theme.seo %}h2{% else %}h1{%- endif %} class="collection-header">{{ year }}</{%- if theme.seo %}h2{% else %}h1{%- endif %}>
+      <{%- if theme.seo %}h2{% else %}h1{%- endif %} class="collection-header">{{ year }}.{{ month }}</{%- if theme.seo %}h2{% else %}h1{%- endif %}>
     </div>
   {%- endif %}
 
