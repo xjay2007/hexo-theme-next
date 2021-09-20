@@ -228,6 +228,7 @@ links:
   #Title: http://example.com
   dotrabbit's lair: http://dotrabbit.tk
   LePhee's Blog: http://www.lephee.net
+  开心每一天: http://www.esrrhs.xyz/
   联系友链>>: /links/
 
 # Sidebar Avatar
@@ -779,7 +780,7 @@ leancloud_visitors:
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
 # Visit https://firebase.google.com/docs/firestore/ to get more information about firestore.
 firestore:
-  enable: true
+  enable: false
   collection: articles # Required, a string collection name to access firestore database
   apiKey: AIzaSyCOupyyT9c_HVputgUAkikpDbhJeZrCYb8 # Required
   projectId: xjay-hexo-blog # Required

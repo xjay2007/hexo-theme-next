@@ -127,7 +127,7 @@ window.addEventListener('DOMContentLoaded', () => {
           content = unescapeHtml(content);
         }
         let contentInLowerCase = content.toLowerCase();
-        let articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+        let articleUrl = decodeURIComponent(data.url);//.replace(/\/{2,}/g, '/');
         let indexOfTitle = [];
         let indexOfContent = [];
         keywords.forEach(keyword => {
