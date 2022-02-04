@@ -223,7 +223,7 @@ window.addEventListener('DOMContentLoaded', () => {
         datas = datas.filter(data => data.title).map(data => {
           data.title = data.title.trim();
           data.content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
-          data.url = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+          data.url = decodeURIComponent(data.url);//.replace(/\/{2,}/g, '/');
           return data;
         });
         // Remove loading animation
