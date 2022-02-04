@@ -1,13 +1,16 @@
 {% macro render(posts) %}
 {%- set current_year = '1970' %}
+{%- set current_month = '01' %}
 {%- for post in posts.toArray() %}
 
   {%- set year = date(post.date, 'YYYY') %}
+  {%- set month = date(post.date, 'MM') %}
 
-  {%- if year !== current_year %}
+  {%- if year !== current_year or month !== current_month %}
     {%- set current_year = year %}
+    {%- set current_month = month %}
     <div class="collection-year">
-      <span class="collection-header">{{ current_year }}</span>
+      <span class="collection-header">{{ current_year }}.{{ current_month }}</span>
     </div>
   {%- endif %}
 
